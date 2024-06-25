@@ -1,0 +1,71 @@
+
+/*优设标题黑*/
+@font-face {
+  font-family: "youshebiaotihei";
+  src: url("./YOUSHEBIAOTIHEI-2.TTF");
+}
+
+/*Din LED数字*/
+@font-face {
+  font-family: "din";
+  src: url("./din.TTF");
+}
+/*标题 斜体*/
+@font-face {
+  font-family: "pangmenzhengdao";
+  src: url("./庞门正道标题体.ttf");
+}
+/*阿里妈妈标题黑*/
+@font-face {
+  font-family: "AlimamaShuHeiTi-Bold";
+  src: url("./AlimamaShuHeiTi-Bold.ttf");
+}
+
+/*LED数字*/
+@font-face {
+  font-family: "LiquidCrystal-ExBold";
+  src: url("./LiquidCrystal-ExBold.otf");
+}
+/*LED数字*/
+@font-face {
+  font-family: "PingFang-Medium";
+  src: url("./PingFang-Medium.ttf");
+}
+
+/**
+ * 优设标题黑
+ */
+.font-youshebiaotihei {
+  font-family: "youshebiaotihei";
+}
+
+/**
+ * 庞门正道标题体
+ */
+.font-pangmenzhengdao {
+  font-family: "pangmenzhengdao";
+}
+/**
+ *Din LED数字
+ */
+.font-led {
+  font-family: "din";
+}
+/**
+ * LED数字
+ */
+.font-LiquidCrystal-ExBold {
+  font-family: "LiquidCrystal-ExBold";
+}
+/**
+ * 阿里妈妈标题黑
+ */
+.font-AlimamaShuHeiTi-Bold {
+  font-family: "AlimamaShuHeiTi-Bold";
+}
+/**
+ * 苹方-中粗
+ */
+.font-PingFang-Medium {
+  font-family: "PingFang-Medium";
+}

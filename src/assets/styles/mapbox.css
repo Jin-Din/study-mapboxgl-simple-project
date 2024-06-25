@@ -1,0 +1,87 @@
+/* mapbox 控件样式*/
+
+:root {
+  --theme-color: rgba(25, 133, 34, 1);
+}
+/* 隐藏logo */
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapboxgl-popup-content {
+  /*background-color: var(--theme-color);*/
+  /*color: var(--color);*/
+  font-size: 1.05em;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+  align-self: center;
+  border-top: none;
+  border-bottom-color: var(--theme-color);
+}
+
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
+  align-self: flex-start;
+  border-top: none;
+  border-left: none;
+  border-bottom-color: var(--theme-color);
+}
+
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  align-self: flex-end;
+  border-top: none;
+  border-right: none;
+  border-bottom-color: var(--theme-color);
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  align-self: center;
+  border-bottom: none;
+  /*border-top-color: var(--theme-color);*/
+}
+
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+  align-self: flex-start;
+  border-bottom: none;
+  border-left: none;
+  border-top-color: var(--theme-color);
+}
+
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  align-self: flex-end;
+  border-bottom: none;
+  border-right: none;
+  border-top-color: var(--theme-color);
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  align-self: center;
+  border-left: none;
+  border-right-color: var(--theme-color);
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  align-self: center;
+  border-right: none;
+  border-left-color: var(--theme-color);
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 33px;
+  right: 8px;
+}
+
+/* 为适应 底图切换按钮的布局，将mapboxgl-ctrl-bottom-right */
+.mapboxgl-ctrl-bottom-right {
+  bottom: 86px;
+}
+/*mapbox 相关的控制样式-地图全屏控件 */
+.mapboxgl-control-container .mapboxgl-ctrl-fullscreen {
+  background-color: rgba(0, 0, 0, 0.6);
+  /*color: #fff;*/
+  z-index: 1;
+
+  .mapboxgl-ctrl-icon {
+    /*filter: grayscale(100%) brightness(200%);*/
+  }
+}

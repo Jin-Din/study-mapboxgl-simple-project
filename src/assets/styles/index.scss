@@ -1,0 +1,401 @@
+// import dark theme
+@use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
+
+//@import 'element-plus/dist/index.css';
+//@import './element.css';
+@import "ant-design-vue/dist/reset.css";
+
+/*加入一些全局的自定义的样式修改*/
+@import "antdv.css";
+
+@import "mapbox.css";
+
+/* 定义全局变量 */
+:root {
+  --headerHeight: 92px;
+  --panelWidth: 30%;
+  --fontSize: 16px;
+}
+
+@media screen and (max-width: 1920px) {
+  /*不同尺寸下更改值*/
+  :root {
+    --panelWidth: 32%;
+    --fontSize: 16px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  /*超大屏比例*/
+  :root {
+    --panelWidth: 24%;
+    --fontSize: 17px;
+  }
+}
+
+body,
+html,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: PingFang-Medium, Alibaba-PuHuiTi-M, Alibaba-PuHuiTi, Microsoft YaHei, Arial, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    sans-serif;
+  font-size: var(--fontSize);
+}
+/*全局header的高度*/
+.global-header-height {
+  height: var(--headerHeight);
+}
+/*全局距离顶部header的偏移量*/
+.global-static-top-offset {
+  top: var(--headerHeight);
+}
+
+.global-static-panel-width {
+  width: var(--panelWidth);
+}
+
+.global-static-left-offset {
+  left: var(--panelWidth);
+}
+
+.global-static-right-offset {
+  right: var(--panelWidth);
+}
+.global-static-right-offset-1-vw {
+  right: 1vw;
+}
+.global-static-left-offset-1-vw {
+  left: 1vw;
+}
+.bg-gis {
+  background-size: auto;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.collapsed {
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #62a8ea;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #89bceb;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline: none;
+  outline-offset: -2px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/*dark样式*/
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cc3300;
+  text-decoration: underline;
+}
+
+/* 全局共用样式 */
+/* 标题的图标 */
+.global-title-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("@public/images/icons/icon--0.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  /*森林资源-图标*/
+
+  &.slzy {
+    background-image: url("@public/images/icons/icon--0.png");
+  }
+
+  /*荒漠化资源图标*/
+
+  &.hmhsh {
+    background-image: url("@public/images/icons/icon--1.png");
+  }
+
+  /*草地资源图标*/
+
+  &.cdzy {
+    background-image: url("@public/images/icons/icon--2.png");
+  }
+
+  /*草地资源图标*/
+
+  &.zrbhd {
+    background-image: url("@public/images/icons/icon--3.png");
+  }
+
+  /*湿地资源图标*/
+
+  &.sdzy {
+    background-image: url("@public/images/icons/icon--4.png");
+  }
+
+  /*湿地资源图标*/
+
+  &.ysdzw {
+    background-image: url("@public/images/icons/icon--5.png");
+  }
+
+  /*国土增绿*/
+
+  &.gtzl {
+    background-image: url("@public/images/icons/icon--6.png");
+  }
+
+  /*有害生物*/
+
+  &.yhsw {
+    background-image: url("@public/images/icons/icon--7.png");
+  }
+
+  /*林业产业*/
+
+  &.lycy {
+    background-image: url("@public/images/icons/icon--8.png");
+  }
+
+  /*生态卫士*/
+
+  &.stws {
+    background-image: url("@public/images/icons/icon--11.png");
+  }
+
+  /*森林防火*/
+
+  &.slfh {
+    background-image: url("@public/images/icons/icon--14.png");
+  }
+
+  /*融媒体*/
+
+  &.rmt {
+    background-image: url("@public/images/icons/icon--15.png");
+  }
+}
+
+.global-title-text {
+  /*font-family: youshebiaotihei;*/
+  margin-left: 10px;
+  font-size: 22px;
+  background: linear-gradient(0deg, #1cbe61 30%, #e4e55f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*padding-left: 8px;*/
+  /*cursor: pointer;*/
+
+  &.active {
+    background: linear-gradient(0deg, #e08c5e 0%, #f1d57a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.global-sub-title-text {
+  /*font-family: youshebiaotihei;*/
+  font-size: 16px;
+  background: linear-gradient(0deg, #1cbe61 30%, #e4e55f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*padding-left: 8px;*/
+  /*cursor: pointer;*/
+
+  &.active {
+    background: linear-gradient(0deg, #e08c5e 0%, #f1d57a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.global-label-text {
+  width: 160px;
+  display: inline-block;
+  letter-spacing: -1px;
+  text-align: right;
+  font-weight: 400;
+  color: #fffc;
+}
+
+.global-label-value {
+  width: 65px;
+  color: #1cbe61;
+  font-size: 2.2222222222vh;
+  letter-spacing: -1px;
+  margin: 0 10px;
+  text-align: right;
+  font-family: din;
+}
+
+.global-label-value-unit {
+  font-size: 14px;
+  color: #fffc;
+}
+
+/*上下高亮线 样式*/
+.top-bottom-light-bar {
+  background: #012e08; /* #08517851 fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(1, 46, 8, 0.99), #809d8433); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(1, 46, 8, 0.59),
+    rgba(128, 157, 132, 0.1)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  &:before {
+    width: 100%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(90deg, rgba(0, 198, 255, 0) 0%, rgb(28, 190, 97) 50%, rgba(0, 198, 255, 0) 100%);
+  }
+
+  &:after {
+    width: 100%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(90deg, rgba(0, 198, 255, 0) 0%, rgb(28, 190, 97) 50%, rgba(0, 198, 255, 0) 100%);
+  }
+}
+
+.top-light-line {
+  background: #012e08; /* #08517851 fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(1, 46, 8, 0.99), #809d8433); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(1, 46, 8, 0.59),
+    rgba(128, 157, 132, 0.1)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  &:before {
+    width: 100%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(90deg, rgba(0, 198, 255, 0) 0%, rgb(28, 190, 97) 50%, rgba(0, 198, 255, 0) 100%);
+  }
+}
+
+.bottom-light-line {
+  background: #012e08; /* #08517851 fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(1, 46, 8, 0.99), #809d8433); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(1, 46, 8, 0.59),
+    rgba(128, 157, 132, 0.1)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  &:after {
+    width: 100%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(90deg, rgba(0, 198, 255, 0) 0%, rgb(28, 190, 97) 50%, rgba(0, 198, 255, 0) 100%);
+  }
+}
+
+/**
+森林资源头部全局样式
+ */
+.common-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 313px;
+  height: 50px;
+  margin-top: -7px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-position-x: -0.5208333333vw;*/
+}
+
+.common-head {
+  font-size: 2.3vh;
+  background: linear-gradient(0deg, #1cbe61 30%, #e4e55f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 77px;
+  cursor: pointer;
+}
+
+/* 滚动条 */
+
+/* #0e0c0c34 */
+/*设置宽度,轨道颜色*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: #eeeeee01; /*可以设置轨道颜色*/
+  padding-right: 2px;
+}
+
+/*滚动条*/
+::-webkit-scrollbar-thumb {
+  background: rgba(25, 133, 34, 0.2);
+  border-radius: 10px;
+}
+
+/*增加悬停样式*/
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(25, 133, 34, 0.9);
+}
+
+::-webkit-scrollbar-corner {
+  background: #ffffff01; /*修改同时有垂直滚动条和水平滚动条时交汇的部分的样式*/
+}
+
+/* // #0e0c0c0f; */
+/*滚动轨道样式*/
+::-webkit-scrollbar-track {
+  background: #eeeeee01;
+  border-radius: 2px;
+}

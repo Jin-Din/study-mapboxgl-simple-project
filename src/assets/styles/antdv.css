@@ -1,0 +1,77 @@
+/*
+在 a-modal 上 加入 class='custom-ant-modal',例如：
+<a-modal class='custom-ant-model'>
+*/
+
+.custom-ant-modal {
+    .ant-modal-content {
+        border: 1px solid #1BC262;
+        padding: 15px 15px;
+        background-color: #0a1910e6!important;
+
+        /*头部*/
+        .ant-modal-header {
+            background-color: transparent;
+        }
+        /*关闭按钮*/
+        .ant-modal-close{
+
+        }
+        /*内容*/
+        .ant-modal-body{
+            background-color: transparent;
+        }
+        /*底部按钮*/
+        .ant-modal-footer{
+            background-color: transparent;
+        }
+    }
+}
+.custom-ant-table{
+
+    .ant-table-thead > tr >th{
+        color: white;
+        background: transparent !important;
+        border-top: 1px solid #1b8648;
+        border-left: 1px solid #1b8648;
+        border-bottom: 1px solid #1b8648;
+
+
+    }
+
+    .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+        background-color: #0a1910e6;
+    }
+    .ant-table-body .ant-table-row-hover{
+        background: #0a1910e6;
+    }
+    .ant-table-body .ant-table-row-hover>td{
+        background: #0a1910e6;
+    }
+
+}
+.ant-table-wrapper .ant-table.ant-table-bordered >.ant-table-container >.ant-table-content >table >thead>tr>th{
+   /* border-inline-end:1px solid red;*/
+    border-right: 1px solid #1b8648;
+}
+.ant-table-wrapper .ant-table{
+    background:transparent !important;
+
+
+
+
+
+
+
+
+}
+.rowClass>td {
+    border-right: 1px solid #1b8648 !important;
+    border-bottom: 1px solid #1b8648 !important;
+
+}
+
+
+.rowClass>td:first-child {
+    border-left: 1px solid #1b8648 !important;
+}
