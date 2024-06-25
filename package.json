@@ -18,6 +18,7 @@
     "@mapbox/mapbox-gl-draw-static-mode": "^1.0.1",
     "@mapbox/mapbox-gl-sync-move": "^0.3.1",
     "@sxgis/mapbox-gl-cgcs2000": "^0.0.5",
+    "@sxgis/mapbox-gl-cgcs2000-mapextend": "^0.0.5",
     "@turf/turf": "^6.5.0",
     "@vueuse/core": "^10.7.1",
     "animate.css": "^4.1.1",

@@ -5,8 +5,17 @@ import type { AnySourceData, Layer, MapboxGeoJSONFeature, Style } from "@sxgis/m
 import "@sxgis/mapbox-gl-cgcs2000/dist/mapbox-gl.css";
 // import "@assets/styles/mapbox.css";
 
+//全局注册扩展方法,这样全局都能使用。
+import "@sxgis/mapbox-gl-cgcs2000-mapextend";
+
+mapboxgl.workerCount = 6; //开启多核模式，加快地图渲染速度
+mapboxgl.maxParallelImageRequests = 32; //获取或者设置并行加载图片（raster tiles, sprites, icons等）的最大值， 该值将影响加载较多栅格瓦片的地图的性能。默认值为16
+mapboxgl.accessToken = "pk.eyJ1Ijoib25lZ2lzZXIiLCJhIjoiY2plZHptcnVuMW5tazMzcWVteHM2aGFsZiJ9.ERWP7zZ-N6fmNl3cRocJ1g";
+
 export default {
   install: (app: App) => {
+    //@ts-ignore
+    window.mapboxgl = mapboxgl;
     // 註冊全局的 MapboxGL 類別
     app.config.globalProperties.mapboxgl = mapboxgl;
   },

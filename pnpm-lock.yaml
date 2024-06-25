@@ -23,6 +23,9 @@ importers:
       '@sxgis/mapbox-gl-cgcs2000':
         specifier: ^0.0.5
         version: 0.0.5
+      '@sxgis/mapbox-gl-cgcs2000-mapextend':
+        specifier: ^0.0.5
+        version: 0.0.5
       '@turf/turf':
         specifier: ^6.5.0
         version: 6.5.0
@@ -544,6 +547,12 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
+
+  '@sxgis/mapbox-gl-cgcs2000-mapextend@0.0.5':
+    resolution: {integrity: sha512-byd1iG366S4Zy01q6R+D8XnGoGoSpogruWLzmK28Uvbn/eh7k+8NG2pxW5T6vjNLxOnEd0ui36CcmtROwe77gA==}
+
+  '@sxgis/mapbox-gl-cgcs2000@0.0.2':
+    resolution: {integrity: sha512-qCAb4MMw3AGLMZM4LHcroDnE9n52cyyn4WM4g69cMybdXeWiRzeZAAtxotALslV7wdiS4U67bvQoz7euu545yQ==}
 
   '@sxgis/mapbox-gl-cgcs2000@0.0.5':
     resolution: {integrity: sha512-M7drXuWKoWjrRVYgJzNS5ZGo8KtxFYoGe7wKpOhyLOq0TWXURtC6esOzjxAuflwyCVlxenr0mHW++yGoQkaVMg==}
@@ -3815,6 +3824,14 @@ snapshots:
       nanopop: 2.4.2
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@sxgis/mapbox-gl-cgcs2000-mapextend@0.0.5':
+    dependencies:
+      '@sxgis/mapbox-gl-cgcs2000': 0.0.2
+
+  '@sxgis/mapbox-gl-cgcs2000@0.0.2':
+    dependencies:
+      typescript: 5.5.2
 
   '@sxgis/mapbox-gl-cgcs2000@0.0.5':
     dependencies:
